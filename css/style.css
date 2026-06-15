@@ -1,0 +1,200 @@
+/* ── Reset & Variables ─────────────────────────────────── */
+    :root {
+      --color-primario: #4a7c59;
+      --color-secundario: #42618a;
+      --color-enlace: #2b6cb0;
+      --color-acento: #f0f4f8;
+      --color-texto: #2d3748;
+      --fuente-titulo: 'Georgia', serif;
+      --fuente-cuerpo: 'Trebuchet MS', sans-serif;
+      --radio-borde: 8px;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: var(--fuente-cuerpo);
+      background-color: var(--color-acento);
+      color: var(--color-texto);
+      line-height: 1.7;
+    }
+    /* ── Header ───────────────────────────────────────────── */
+    header {
+      background-color: var(--color-primario);
+      color: #fff;
+      padding: 2rem 4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+    header h1 {
+      font-family: var(--fuente-titulo);
+      font-size: 2.4rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    /* ── Navegación ───────────────────────────────────────── */
+    nav ul {
+      list-style: none;      display: flex;      gap: 2rem;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: var(--radio-borde);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    nav ul li a:hover {
+      background-color: var(--color-secundario);
+      color: var(--color-primario);
+    }
+    /* ── Layout principal ─────────────────────────────────── */
+    .contenedor {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2.5rem;
+    }
+    /* ── Artículos ────────────────────────────────────────── */
+    article {
+      background: #fff;
+      border-radius: var(--radio-borde);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      border-left: 5px solid var(--color-secundario);
+    }
+    article h2 {
+      font-family: var(--fuente-titulo);
+      font-size: 1.6rem;
+      margin-bottom: 0.6rem;
+      color: var(--color-primario);
+    }
+    article .meta {
+      font-size: 0.82rem; color: #888; margin-bottom: 1rem;
+    }
+    article p {
+      font-size: 1rem; margin-bottom: 1rem;
+    }
+    article img {
+      width: 25%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: var(--radio-borde);
+      display: block;
+      margin-bottom: 1.2rem;
+    }
+    /* ── Etiquetas / Tags ─────────────────────────────────── */
+    .etiquetas {
+      display: flex;      flex-wrap: wrap;      gap: 0.5rem;      margin-top: 1rem;
+    }
+    .etiqueta {
+      background-color: var(--color-acento);
+      color: var(--color-primario);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    /* ── Sidebar ──────────────────────────────────────────── */
+    aside {
+      position: sticky;
+      top: 2rem;
+      align-self: start;
+    }
+    .widget {
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      border-radius: var(--radio-borde);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+    .widget h3 {
+      font-family: var(--fuente-titulo);
+      font-size: 1.15rem;
+      margin-bottom: 1rem;
+      color: var(--color-primario);
+      border-bottom: 2px solid var(--color-acento);
+      padding-bottom: 0.5rem;
+    }
+    /* ── Iconos de contacto ────────────────────────── */
+    .widget a {
+      color: var(--color-enlace);  
+      text-decoration: none;  
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .widget a:hover {
+      text-decoration: underline;
+    }
+    .widget i {
+        font-size: 30px;
+        margin-right: 10px;
+    }
+    .widget .fa-envelope {
+        color: rgb(182, 181, 181);
+    }
+    .widget .fa-whatsapp {
+        color: green;
+    }
+    .widget .fa-linkedin {
+        color: blue;
+    }
+
+
+    
+    /* ── Lista reciente ───────────────────────────────────── */
+    .lista-reciente {
+      list-style: none;  
+      padding: 0;
+    }
+    .lista-reciente li {
+      padding: 0.5rem 0;
+      border-bottom: 1px dashed #ddd;
+      font-size: 0.9rem;
+    }
+    .lista-reciente li:last-child {
+      border-bottom: none;
+    }
+    .lista-reciente a {
+      color: var(--color-enlace);  text-decoration: none;  font-weight: 600;
+    }
+    .lista-reciente a:hover {
+      text-decoration: underline;
+    }
+    /* ── Footer ───────────────────────────────────────────── */
+    footer {
+      background-color: var(--color-texto);
+      color: #ddd;
+      text-align: center;
+      padding: 2.5rem;
+      margin-top: 4rem;
+      font-size: 0.88rem;
+    }
+    footer a {
+      color: var(--color-secundario);   text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    /* ── Media Query ──────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .contenedor {
+        grid-template-columns: 1fr;
+      }
+      header {
+        flex-direction: column;  gap: 1rem;  text-align: center;
+      }
+    }
